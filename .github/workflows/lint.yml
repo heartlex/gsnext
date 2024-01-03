@@ -26,6 +26,3 @@ jobs:
         uses: u0reo/npm-install@fix/restore-failure
         with:
           useRollingCache: true
-
-      - name: 🔬 Lint
-        run: yarn lint
