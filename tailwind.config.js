@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -21,14 +21,30 @@ module.exports = {
       borderRadius: {
         '4xl': '2.5rem',
       },
+      colors: {
+        'screamin-green': {
+          DEFAULT: '#38FF6A',
+          50: '#D9FFE2',
+          100: '#C7FFD5',
+          200: '#A3FFBA',
+          300: '#80FF9F',
+          400: '#5CFF85',
+          500: '#38FF6A',
+          600: '#05FF44',
+          700: '#00D134',
+          800: '#009E28',
+          900: '#006B1B',
+          950: '#005214',
+        },
+      },
       fontFamily: {
         sans: ['Mona Sans', ...defaultTheme.fontFamily.sans],
         display: [
           ['Mona Sans', ...defaultTheme.fontFamily.sans],
-          { fontVariationSettings: '"wdth" 125' },
+          { fontVariationSettings: '"width" 125' },
         ],
       },
     },
   },
   plugins: [],
-}
+};

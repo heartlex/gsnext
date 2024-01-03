@@ -1,1 +1,10 @@
 @tailwind utilities;
+
+@layer utilities {
+    .duration-20000 {
+        animation-duration: 20000ms;
+    }
+    .play-state-paused {
+        animation-play-state: paused;
+    }
+}

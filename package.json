@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@leafac/rehype-shiki": "^2.2.1",
@@ -36,7 +37,13 @@
   "devDependencies": {
     "eslint": "8.56.0",
     "eslint-config-next": "^14.0.4",
+    "husky": "^8.0.3",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
   }
 }
