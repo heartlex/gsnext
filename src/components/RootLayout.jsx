@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion';
-
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Footer } from '@/components/Footer';
@@ -47,7 +46,7 @@ function Header({
         </Link>
         <div className='flex items-center gap-x-8'>
           <Button href='/contact' invert={invert}>
-            Contact us
+            Contact me
           </Button>
           <button
             ref={toggleRef}
@@ -102,13 +101,13 @@ function Navigation() {
   return (
     <nav className='mt-px font-display text-5xl font-medium tracking-tight text-white'>
       <NavigationRow>
-        <NavigationItem href='/work'>Our Work</NavigationItem>
-        <NavigationItem href='/about'>About Us</NavigationItem>
+        <NavigationItem href='/work'>My Work</NavigationItem>
+        <NavigationItem href='/process'>The Process</NavigationItem>
       </NavigationRow>
-      <NavigationRow>
-        <NavigationItem href='/process'>Our Process</NavigationItem>
-        <NavigationItem href='/blog'>Blog</NavigationItem>
-      </NavigationRow>
+      {/*<NavigationRow>*/}
+      {/*  <NavigationItem href='/about'>About me</NavigationItem>*/}
+      {/*  <NavigationItem href='/blog'>Blog</NavigationItem>*/}
+      {/*</NavigationRow>*/}
     </nav>
   );
 }
@@ -187,7 +186,7 @@ function RootLayoutInner({ children }) {
                 <div className='grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16'>
                   <div>
                     <h2 className='font-display text-base font-semibold text-white'>
-                      Our offices
+                      Devcave
                     </h2>
                     <Offices
                       invert
@@ -196,7 +195,7 @@ function RootLayoutInner({ children }) {
                   </div>
                   <div className='sm:border-l sm:border-transparent sm:pl-16'>
                     <h2 className='font-display text-base font-semibold text-white'>
-                      Follow us
+                      Follow me
                     </h2>
                     <SocialMedia className='mt-6' invert />
                   </div>

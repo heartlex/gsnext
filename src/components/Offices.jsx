@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import clsx from 'clsx';
 
 function Office({ name, children, invert = false }) {
   return (
@@ -14,26 +14,26 @@ function Office({ name, children, invert = false }) {
       <br />
       {children}
     </address>
-  )
+  );
 }
 
 export function Offices({ invert = false, ...props }) {
   return (
-    <ul role="list" {...props}>
+    <ul role='list' {...props}>
       <li>
-        <Office name="Copenhagen" invert={invert}>
-          1 Carlsberg Gate
+        <Office name='Dozza' invert={invert}>
+          Via Pertini 3/D
           <br />
-          1260, København, Denmark
+          40060, Bologna, Italy
         </Office>
       </li>
       <li>
-        <Office name="Billund" invert={invert}>
-          24 Lego Allé
+        <Office name='Remote' invert={invert}>
+          Of course you can hire me
           <br />
-          7190, Billund, Denmark
+          REMOTELY
         </Office>
       </li>
     </ul>
-  )
+  );
 }

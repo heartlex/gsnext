@@ -28,7 +28,7 @@ const navigation = [
       { title: 'About', href: '/about' },
       { title: 'Process', href: '/process' },
       { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
+      { title: 'Contact me', href: '/contact' },
     ],
   },
   {
@@ -125,7 +125,7 @@ export function Footer() {
             <GSLogo className='h-12' />
           </Link>
           <p className='text-sm text-neutral-700'>
-            © Studio Agency Inc. {new Date().getFullYear()}
+            © Gianluca Strada {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>
