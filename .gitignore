@@ -44,5 +44,5 @@ sitemap.xml
 sitemap-*.xml
 
 # locks
-#package-lock.json
-yarn.lock
+package-lock.json
+#yarn.lock
