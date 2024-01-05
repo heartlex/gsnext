@@ -48,37 +48,21 @@ function Discover() {
     <Section title='Discover' image={{ src: imageWhiteboard }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
-          I work closely with my clients to understand their
+          Piecing together the puzzle to uncover what the the client
           <strong className='font-semibold text-neutral-950'>
             {' '}
             needs{' '}
           </strong>{' '}
-          and goals, embedding myself in their every day operations to
-          understand what makes their business tick.
-        </p>
-        <p>
-          My personal private investigator shadow the company director’s for
-          several weeks while i perform social engineering hacks to gain access
-          to his
-          <strong className='font-semibold text-neutral-950'> business </strong>
-          accounts — to know the client better than their partner
-        </p>
-        <p>
-          Once the full audit is complete, i report back with a comprehensive
-          <strong className='font-semibold text-neutral-950'>
-            {' '}
-            plan{' '}
-          </strong>{' '}
-          and, more importantly, a budget.
+          both explicit and latent. Grasp complex requirements and asking
+          insightful questions to translate conceptual ideas into precise
+          objectives.
         </p>
       </div>
-
       <h3 className='mt-12 font-display text-base font-semibold text-neutral-950'>
         Included in this phase
       </h3>
       <TagList className='mt-4'>
         <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Blood samples</TagListItem>
         <TagListItem>Proofs-of-concept</TagListItem>
         <TagListItem>A lot of caffeine</TagListItem>
       </TagList>
@@ -86,13 +70,26 @@ function Discover() {
   );
 }
 
-function Build() {
+function Design() {
   return (
-    <Section title='Design & Build' image={{ src: imageLaptop, shape: 1 }}>
+    <Section title='Design' image={{ src: imageLaptop, shape: 1 }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
-          Based off of the discovery phase, i let my brain pulls out great ideas
-          while the fingers go wild and do all the dirty work for me.
+          Whether it's designing a user interface that's a joy to use, mapping
+          out systems for smooth sailing, or creating designs that catch the
+          eye, i've got the artistic touch. I turn ideas into designs that not
+          only
+          <strong className='font-semibold text-neutral-950'>
+            {' '}
+            work well{' '}
+          </strong>
+          but also{' '}
+          <strong className='font-semibold text-neutral-950'>
+            {' '}
+            look very good{' '}
+          </strong>
+          . Clients appreciate my talent for making their ideas visually
+          appealing and user-friendly.
         </p>
       </div>
 
@@ -107,25 +104,44 @@ function Build() {
   );
 }
 
-function Deliver() {
+function Develop() {
   return (
-    <Section title='Deliver' image={{ src: imageMeeting, shape: 2 }}>
+    <Section title='Develop' image={{ src: imageMeeting, shape: 2 }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
-          No time to lose here, because time is money and i know you don't want
-          to waste it.
+          Translating design concepts into robust, efficient, and reliable code.
+          Navigating coding challenges with precision, i ensure a seamless
+          development process that aligns with project objectives. Clients
+          entrust me to bring their{' '}
+          <strong className='font-semibold text-neutral-950'>
+            {' '}
+            visions to life{' '}
+          </strong>{' '}
+          through the implementation of high-quality and technically sound
+          solutions.
+        </p>
+      </div>
+    </Section>
+  );
+}
+
+function Deliver() {
+  return (
+    <Section title='Deliver' image={{ src: imageLaptop, shape: 3 }}>
+      <div className='space-y-6 text-base text-neutral-600'>
+        <p>
+          A meticulous quality assurance practitioner, i excel in thorough
+          testing procedures to guarantee a polished final product. Managing
+          deployment processes seamlessly, i ensure the successful delivery of
+          refined and flawless solutions that exceed client expectations.
+          Clients commend my commitment to delivering not just functional
+          products but refined, quality solutions.
         </p>
         <p>
-          I ensure that the main pages of the site are{' '}
-          <strong className='font-semibold text-neutral-950'>
-            fully functional
-          </strong>{' '}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{' '}
-          <strong className='font-semibold text-neutral-950'>
-            maintenance
-          </strong>{' '}
-          retainer.
+          Throughout these stages, my effective communication style fosters
+          transparency and understanding. i am dedicated to ensuring a
+          professional and successful project journey, delivering results that
+          meet and surpass client expectations.
         </p>
       </div>
 
@@ -135,7 +151,7 @@ function Deliver() {
       <List className='mt-8'>
         <ListItem title='Testing'>
           Projects always have 100% of tests working. This is quite simple when
-          you don't write any of them.
+          you don't write any of them 😆.
         </ListItem>
         <ListItem title='Infrastructure'>
           You already know where to host your website? Very well, but if you
@@ -143,7 +159,7 @@ function Deliver() {
         </ListItem>
         <ListItem title='Support'>
           Because i hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from me.
+          uses, you can expect a lifetime of support, and invoices, from me 🧛🏻.
         </ListItem>
       </List>
     </Section>
@@ -162,37 +178,39 @@ function Values() {
 
       <SectionIntro
         eyebrow='Values'
-        title='Balancing reliability and innovation'
+        title='Balancing reliability, creativity and innovation'
       >
         <p>
-          I strive to stay at the forefront of emerging trends and technologies,
-          while completely ignoring them and forking that old Rails project i
-          feel comfortable using. I stand by our core values to justify that
-          decision.
+          Reliability is the cornerstone of my work, ensuring that every project
+          is delivered with precision and meets or exceeds expectations.
+          Creativity is my driving force, infusing unique and visually
+          compelling solutions into every design and development endeavor. I
+          embrace innovation as a mindset, constantly seeking new approaches and
+          technologies to push the boundaries of what's possible.
         </p>
       </SectionIntro>
 
       <Container className='mt-24'>
         <GridList>
-          <GridListItem title='Meticulous'>
-            The first part of any partnership is to put your logo in the right
-            template. The second step is to do the colors.
+          <GridListItem title='Meticulousness'>
+            Precision and attention to detail are at the core of my work in
+            order to deliver exceptional results you can be proud of.
           </GridListItem>
-          <GridListItem title='Efficient'>
-            I pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+          <GridListItem title='Efficienty'>
+            I pride myself on meeting deadlines and adeptly organizing my work,
+            ensuring seamless project execution and successful outcomes.
           </GridListItem>
-          <GridListItem title='Adaptable'>
+          <GridListItem title='Adaptability'>
             Every business has unique needs and my greatest challenge is
-            shoe-horning those needs into something you can be proud of.
+            tailoring solutions that perfectly fit them.
           </GridListItem>
-          <GridListItem title='Loyal'>
-            I foster long-term relationships with my clients that go beyond just
-            delivering a product, allowing me to invoice them for decades.
+          <GridListItem title='Satisfaction'>
+            Strive for long-term partnerships built on trust, reliability, and a
+            reputation for delivering exceptional results.
           </GridListItem>
-          <GridListItem title='Innovative'>
+          <GridListItem title='Innovation'>
             The technological landscape is always evolving and so am i,
-            constantly on the lookout for new open source projects to clone.
+            constantly on the lookout for new things to explore.
           </GridListItem>
         </GridList>
       </Container>
@@ -211,15 +229,17 @@ export default function Process() {
     <>
       <PageIntro eyebrow='The process' title='How i work'>
         <p>
-          I believe in efficiency and maximizing my resources to provide the
-          best value to my clients. The primary way i do that is by re-using the
-          same five projects i’ve been developing for the past decade.
+          Understanding and prioritizing the unique needs of each client is my
+          key to success. I'm on a mission to turn your challenges into
+          triumphs, because your satisfaction is my priority and i'm dedicated
+          to delivering custom solutions that precisely fit your requirements.
         </p>
       </PageIntro>
 
       <div className='mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40'>
         <Discover />
-        <Build />
+        <Design />
+        <Develop />
         <Deliver />
       </div>
 

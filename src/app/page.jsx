@@ -117,12 +117,12 @@ function Services() {
     <>
       <SectionIntro
         eyebrow='Services'
-        title='I help you identify, spread your business, explore and respond to new opportunities.'
+        title='Supercharging your business, expand your reach and guide you through untapped possibilities'
         className='mt-24 sm:mt-32 lg:mt-40'
       >
         <p>
-          My mission is to bring light over your businesses creating something
-          ambitious, fresh and iconic.
+          My mission? Illuminate your brand with ambition, freshness, and iconic
+          vibes. Let's make your business shine like never before!
         </p>
       </SectionIntro>
       <Container className='mt-16'>
@@ -142,17 +142,17 @@ function Services() {
               tailored to your needs.
             </ListItem>
             <ListItem title='Branding'>
-              There's nothing more important than how your brand is perceived,
-              i'll make it shine for you.
+              Your brand's perception is everything, and I'm here to give it a
+              dazzling glow that steals the spotlight.
             </ListItem>
             <ListItem title='E-commerce'>
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template i’ve
-              used for the past three years.
+              Unlock the full potential of your products by reaching the widest
+              audience possible through an E-commerce store.
             </ListItem>
-            <ListItem title='Graphic designt'>
-              When you have something you would say out loud, but you're not
-              sure how to do so, let me help you reaching your goal.
+            <ListItem title='Graphic design'>
+              When you have something you would say out loud, but need
+              assistance finding the right words, let me help you reach your
+              communication goals.
             </ListItem>
             <ListItem title='Photography'>
               The importance of the right pic in your business is crucial to
@@ -168,7 +168,7 @@ function Services() {
 
 export const metadata = {
   description:
-    'I am a creative developer working at the intersection of design, photography and technology.',
+    "I'm a creative developer with a flair for design, photography, and technology.",
 };
 
 export default async function Home() {
@@ -182,9 +182,9 @@ export default async function Home() {
             Hello, i'm Gianluca Strada.
           </h1>
           <p className='mt-6 text-xl text-neutral-600'>
-            I am a creative developer working at the intersection of design,
-            photography and technology. Here to satisfy your needs and help you
-            build something beautiful!
+            I'm a creative developer with a flair for design, photography, and
+            technology. Ready to sprinkle some coding magic on your projects and
+            help you create something beautiful 🚀✨!
           </p>
         </FadeIn>
       </Container>

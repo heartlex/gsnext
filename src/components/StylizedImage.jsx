@@ -1,6 +1,6 @@
-import { useId } from 'react'
-import Image from 'next/image'
-import clsx from 'clsx'
+import { useId } from 'react';
+import Image from 'next/image';
+import clsx from 'clsx';
 
 const shapes = [
   {
@@ -18,11 +18,16 @@ const shapes = [
     height: 680,
     path: 'M632.827 9.245A11.5 11.5 0 0 1 644.104 0h63.366c7.257 0 12.7 6.64 11.277 13.755l-25.6 128A11.5 11.5 0 0 1 681.87 151h-28.275a15.999 15.999 0 0 0-15.689 12.862l-95.832 479.159c-4.3 21.502-23.18 36.979-45.107 36.979H178.502c-29.028 0-50.8-26.557-45.107-55.021l102.4-512C240.096 91.477 258.975 76 280.902 76h318.465c10.136 0 21.179-5.35 23.167-15.288l10.293-51.467Zm0 479A11.5 11.5 0 0 1 644.104 479h63.366c7.257 0 12.7 6.639 11.277 13.755l-25.6 128A11.5 11.5 0 0 1 681.87 630h-63.366c-7.257 0-12.7-6.639-11.277-13.755l25.6-128ZM37.104 159a11.5 11.5 0 0 0-11.277 9.245l-25.6 128C-1.196 303.361 4.247 310 11.504 310H74.87a11.5 11.5 0 0 0 11.277-9.245l24.76-123.798a.03.03 0 0 1 .052-.012c.015.021.048.012.052-.014C114.016 158.98 120.134 151 143 151h58.87a11.5 11.5 0 0 0 11.277-9.245l25.6-128C240.17 6.64 234.727 0 227.47 0h-63.366a11.5 11.5 0 0 0-11.277 9.245l-24.754 123.771c-.002.011-.016.015-.024.006-.007-.009-.021-.005-.023.007-3.469 18.452-13.551 25.107-24.88 25.981-.848.065-1.699 0-2.549-.009l-.127-.001H37.104Z',
   },
-]
+  {
+    width: 719,
+    height: 680,
+    path: 'M124.98,202.76l-25.6,128c-1.07,5.38-5.79,9.25-11.28,9.24H24.73c-7.26,0-12.7-6.64-11.28-13.76l25.6-128h0c1.07-5.38,5.79-9.25,11.28-9.24h63.37c7.26,0,12.7,6.64,11.28,13.76ZM644.22,492.5h-63.37c-5.48,0-10.2,3.87-11.28,9.24h0l-25.6,128c-1.42,7.12,4.02,13.76,11.28,13.76h63.37c5.48,0,10.2-3.87,11.28-9.24l25.6-128c1.42-7.12-4.02-13.76-11.28-13.76Zm37.67-258.05c5.48,0,10.2-3.87,11.28-9.24l25.6-128c1.42-7.11-4.02-13.76-11.28-13.76h-63.37c-5.48,0-10.2,3.87-11.28,9.24l-24.75,123.77s-.02,.02-.02,0c0,0-.02,0-.02,0-3.47,18.45-13.55,25.11-24.88,25.98-.85,.07-1.7,0-2.55,0h-.13s-32.4,0-32.4,0l37.48-187.42c5.69-28.46-16.08-55.02-45.11-55.02H222.01c-21.93,0-40.81,15.48-45.11,36.98l-95.83,479.16c-1.5,7.48-8.06,12.86-15.69,12.86h-28.28c-5.48,0-10.2,3.87-11.28,9.24L.23,666.24c-1.42,7.11,4.02,13.76,11.28,13.76h63.37c5.48,0,10.2-3.87,11.28-9.24l10.29-51.47c1.99-9.94,13.03-15.29,23.17-15.29H438.07c21.93,0,40.81-15.48,45.11-36.98l34.72-173.58h37c5.48,0,10.2-3.87,11.28-9.24l24.76-123.8s.02-.03,.04-.02c0,0,.01,0,.02,0,.01,.02,.05,.01,.05-.01,3-17.95,9.12-25.93,31.99-25.93h58.87Z',
+  },
+];
 
 export function StylizedImage({ shape = 0, className, ...props }) {
-  let id = useId()
-  let { width, height, path } = shapes[shape]
+  let id = useId();
+  let { width, height, path } = shapes[shape];
 
   return (
     <div
@@ -31,13 +36,13 @@ export function StylizedImage({ shape = 0, className, ...props }) {
         'relative flex aspect-[719/680] w-full grayscale'
       )}
     >
-      <svg viewBox={`0 0 ${width} ${height}`} fill="none" className="h-full">
-        <g clipPath={`url(#${id}-clip)`} className="group">
-          <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
+      <svg viewBox={`0 0 ${width} ${height}`} fill='none' className='h-full'>
+        <g clipPath={`url(#${id}-clip)`} className='group'>
+          <g className='origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105'>
             <foreignObject width={width} height={height}>
               <Image
-                alt=""
-                className="w-full bg-neutral-100 object-cover"
+                alt=''
+                className='w-full bg-neutral-100 object-cover'
                 style={{ aspectRatio: `${width} / ${height}` }}
                 {...props}
               />
@@ -45,8 +50,8 @@ export function StylizedImage({ shape = 0, className, ...props }) {
           </g>
           <use
             href={`#${id}-shape`}
-            strokeWidth="2"
-            className="stroke-neutral-950/10"
+            strokeWidth='2'
+            className='stroke-neutral-950/10'
           />
         </g>
         <defs>
@@ -54,12 +59,12 @@ export function StylizedImage({ shape = 0, className, ...props }) {
             <path
               id={`${id}-shape`}
               d={path}
-              fillRule="evenodd"
-              clipRule="evenodd"
+              fillRule='evenodd'
+              clipRule='evenodd'
             />
           </clipPath>
         </defs>
       </svg>
     </div>
-  )
+  );
 }
