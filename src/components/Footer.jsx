@@ -4,6 +4,7 @@ import { Container } from '@/components/Container';
 import { FadeIn } from '@/components/FadeIn';
 import { socialMediaProfiles } from '@/components/SocialMedia';
 import { GSLogo } from '@/components/GSLogo';
+import { useRef } from 'react';
 
 const navigation = [
   {
@@ -70,8 +71,22 @@ function ArrowIcon(props) {
 }
 
 function NewsletterForm() {
+  const ref = useRef(null);
+  const handleSubmit = () => {
+    const regex = new RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
+    regex.test(ref.current.value) ? (ref.current.value = '🥚') : '';
+  };
+
+  const setValidityMessage = () => {
+    ref.current.value === '🥚'
+      ? ref.current.setCustomValidity(
+          'The newsletter is a lie! But this is a real Easter egg'
+        )
+      : ref.current.setCustomValidity('');
+  };
+
   return (
-    <form className='max-w-sm'>
+    <form className='max-w-sm' onSubmit={(e) => e.preventDefault()}>
       <h2 className='font-display text-sm font-semibold tracking-wider text-neutral-950'>
         Sign up for the newsletter
       </h2>
@@ -80,6 +95,8 @@ function NewsletterForm() {
       </p>
       <div className='relative mt-6'>
         <input
+          onInvalid={setValidityMessage}
+          ref={ref}
           type='email'
           placeholder='Email address'
           autoComplete='email'
@@ -88,6 +105,7 @@ function NewsletterForm() {
         />
         <div className='absolute inset-y-1 right-1 flex justify-end'>
           <button
+            onClick={handleSubmit}
             type='submit'
             aria-label='Submit'
             className='flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800'
