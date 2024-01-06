@@ -41,7 +41,7 @@ module.exports = {
         sans: ['Mona Sans', ...defaultTheme.fontFamily.sans],
         display: [
           ['Mona Sans', ...defaultTheme.fontFamily.sans],
-          { fontVariationSettings: '"width" 125' },
+          { fontVariationSettings: '"wdth" 125' },
         ],
       },
     },

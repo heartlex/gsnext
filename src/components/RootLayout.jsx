@@ -12,6 +12,7 @@ import { GridPattern } from '@/components/GridPattern';
 import { GSLogo } from '@/components/GSLogo';
 import { Offices } from '@/components/Offices';
 import { SocialMedia } from '@/components/SocialMedia';
+import AnimatedCursor from 'react-animated-cursor';
 
 function XIcon(props) {
   return (
@@ -133,7 +134,6 @@ function RootLayoutInner({ children }) {
       window.removeEventListener('click', onClick);
     };
   }, []);
-
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
@@ -230,8 +230,30 @@ function RootLayoutInner({ children }) {
   );
 }
 
+const AnimateCursor = () => {
+  return (
+    <>
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={18}
+        color='100, 100, 100'
+        outerAlpha={0.3}
+        innerScale={0.7}
+        outerScale={5}
+        outerStyle={{
+          mixBlendMode: 'difference',
+        }}
+      />
+    </>
+  );
+};
+
 export function RootLayout({ children }) {
   let pathname = usePathname();
-
-  return <RootLayoutInner key={pathname}>{children}</RootLayoutInner>;
+  return (
+    <RootLayoutInner key={pathname}>
+      <AnimateCursor />
+      {children}
+    </RootLayoutInner>
+  );
 }

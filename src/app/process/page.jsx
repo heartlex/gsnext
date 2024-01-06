@@ -9,9 +9,9 @@ import { PageIntro } from '@/components/PageIntro';
 import { SectionIntro } from '@/components/SectionIntro';
 import { StylizedImage } from '@/components/StylizedImage';
 import { TagList, TagListItem } from '@/components/TagList';
-import imageLaptop from '@/images/laptop.jpg';
-import imageMeeting from '@/images/meeting.jpg';
-import imageWhiteboard from '@/images/whiteboard.jpg';
+import imageLaptop from '@/assets/images/laptop.jpg';
+import imageMeeting from '@/assets/images/meeting.jpg';
+import imageWhiteboard from '@/assets/images/whiteboard.jpg';
 
 function Section({ title, image, children }) {
   return (
@@ -221,7 +221,8 @@ function Values() {
 export const metadata = {
   title: 'The Process',
   description:
-    'I believe in efficiency and maximizing my resources to provide the best value to my clients',
+    'Understanding and prioritizing the unique needs of each client is my\n' +
+    '          key to success',
 };
 
 export default function Process() {

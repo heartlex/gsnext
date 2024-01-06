@@ -5,18 +5,16 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn';
 import { List, ListItem } from '@/components/List';
 import { SectionIntro } from '@/components/SectionIntro';
 import { StylizedImage } from '@/components/StylizedImage';
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg';
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg';
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg';
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg';
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg';
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg';
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg';
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg';
-import logoUnseal from '@/images/clients/unseal/logo-light.svg';
-import imageLaptop from '@/images/laptop.jpg';
+import logoBrightPath from '@/assets/images/clients/bright-path/logo-light.svg';
+import logoFamilyFund from '@/assets/images/clients/family-fund/logo-light.svg';
+import logoGreenLife from '@/assets/images/clients/green-life/logo-light.svg';
+import logoHomeWork from '@/assets/images/clients/home-work/logo-light.svg';
+import logoMailSmirk from '@/assets/images/clients/mail-smirk/logo-light.svg';
+import logoNorthAdventures from '@/assets/images/clients/north-adventures/logo-light.svg';
+import logoPhobiaLight from '@/assets/images/clients/phobia/logo-light.svg';
+import logoUnseal from '@/assets/images/clients/unseal/logo-light.svg';
+import imageLaptop from '@/assets/images/laptop.jpg';
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata';
-import { Testimonial } from '@/components/Testimonial';
 import { ContactSection } from '@/components/ContactSection';
 
 const clients = [

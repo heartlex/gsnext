@@ -133,7 +133,7 @@ export function Footer() {
             <GSLogo className='h-12' />
           </Link>
           <p className='text-sm text-neutral-700'>
-            © Gianluca Strada {new Date().getFullYear()}
+            Copyright {new Date().getFullYear()} © Gianluca Strada
           </p>
         </div>
       </FadeIn>
