@@ -5,27 +5,35 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn';
 import { List, ListItem } from '@/components/List';
 import { SectionIntro } from '@/components/SectionIntro';
 import { StylizedImage } from '@/components/StylizedImage';
-import logoBrightPath from '@/assets/images/clients/bright-path/logo-light.svg';
-import logoFamilyFund from '@/assets/images/clients/family-fund/logo-light.svg';
-import logoGreenLife from '@/assets/images/clients/green-life/logo-light.svg';
-import logoHomeWork from '@/assets/images/clients/home-work/logo-light.svg';
-import logoMailSmirk from '@/assets/images/clients/mail-smirk/logo-light.svg';
-import logoNorthAdventures from '@/assets/images/clients/north-adventures/logo-light.svg';
-import logoPhobiaLight from '@/assets/images/clients/phobia/logo-light.svg';
-import logoUnseal from '@/assets/images/clients/unseal/logo-light.svg';
+import angular from '@/assets/images/stack/angular.svg';
+import ai from '@/assets/images/stack/ai.svg';
+import ionic from '@/assets/images/stack/ionic.svg';
+import docker from '@/assets/images/stack/docker.svg';
+import ps from '@/assets/images/stack/ps.svg';
+import react from '@/assets/images/stack/react.svg';
+import figma from '@/assets/images/stack/figma.svg';
+import ts from '@/assets/images/stack/ts.svg';
+import wp from '@/assets/images/stack/wp.svg';
+import shopify from '@/assets/images/stack/shopify.svg';
+import loopback from '@/assets/images/stack/loopback.svg';
+import java from '@/assets/images/stack/java.svg';
 import imageLaptop from '@/assets/images/laptop.jpg';
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata';
 import { ContactSection } from '@/components/ContactSection';
 
 const clients = [
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['Angular', angular],
+  ['React', react],
+  ['AI', ai],
+  ['PS', ps],
+  ['Figma', figma],
+  ['Docker', docker],
+  ['Ts', ts],
+  ['shopify', shopify],
+  ['Ionic', ionic],
+  ['Wp', wp],
+  ['Loopback', loopback],
+  ['Java', java],
 ];
 
 function Clients() {
@@ -34,19 +42,19 @@ function Clients() {
       <Container>
         <FadeIn className='flex items-center gap-x-8'>
           <h2 className='text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left'>
-            I’ve worked with tens of amazing people
+            I’ve worked with tens of amazing tools
           </h2>
           <div className='h-px flex-auto bg-neutral-800' />
         </FadeIn>
         <FadeInStagger faster>
           <ul
             role='list'
-            className='mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4'
+            className='mt-10 grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3 lg:grid-cols-4'
           >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
+            {clients.map(([stack, logo]) => (
+              <li key={stack}>
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <Image src={logo} alt={stack} unoptimized />
                 </FadeIn>
               </li>
             ))}
@@ -80,7 +88,7 @@ function CaseStudies({ caseStudies }) {
                     <span className='absolute inset-0 rounded-3xl' />
                     <Image
                       src={caseStudy.logo}
-                      alt={caseStudy.client}
+                      alt={caseStudy.stack}
                       className='h-16 w-16'
                       unoptimized
                     />
@@ -139,13 +147,13 @@ function Services() {
               Specialized in crafting beautiful and high quality web apps,
               tailored to your needs.
             </ListItem>
-            <ListItem title='Branding'>
-              Your brand's perception is everything, and I'm here to give it a
-              dazzling glow that steals the spotlight.
-            </ListItem>
             <ListItem title='E-commerce'>
               Unlock the full potential of your products by reaching the widest
               audience possible through an E-commerce store.
+            </ListItem>
+            <ListItem title='Branding'>
+              Your brand's perception is everything, and I'm here to give it a
+              dazzling glow that steals the spotlight.
             </ListItem>
             <ListItem title='Graphic design'>
               When you have something you would say out loud, but need
@@ -193,7 +201,7 @@ export default async function Home() {
 
       {/*<Testimonial*/}
       {/*  className='mt-24 sm:mt-32 lg:mt-40'*/}
-      {/*  client={{ name: 'Phobia', logo: logoPhobiaDark }}*/}
+      {/*  stack={{ name: 'Phobia', logo: logoPhobiaDark }}*/}
       {/*>*/}
       {/*  The team at Studio went above and beyond with our onboarding, even*/}
       {/*  finding a way to access the user’s microphone without triggering one of*/}
