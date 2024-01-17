@@ -21,6 +21,7 @@ import lit from '@/assets/images/stack/lit.svg';
 import imageLaptop from '@/assets/images/laptop.jpg';
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata';
 import { ContactSection } from '@/components/ContactSection';
+import { Button } from '@/components/Button';
 
 const clients = [
   ['Angular', angular],
@@ -40,7 +41,7 @@ const clients = [
 
 function Clients() {
   return (
-    <div className='mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56'>
+    <div className='mt-24  bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56'>
       <Container>
         <FadeIn className='flex items-center gap-x-8'>
           <h2 className='text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left'>
@@ -62,6 +63,16 @@ function Clients() {
             ))}
           </ul>
         </FadeInStagger>
+        <FadeIn className='mt-10 flex justify-end'>
+          <Button
+            href='https://www.dropbox.com/s/7b8i0paenrfg7qx/cv_EN.pdf?dl=0'
+            download
+            aria-label='View resume'
+            invert
+          >
+            View resume
+          </Button>
+        </FadeIn>
       </Container>
     </div>
   );
@@ -161,11 +172,6 @@ function Services() {
               When you have something you would say out loud, but need
               assistance finding the right words, let me help you reach your
               communication goals.
-            </ListItem>
-            <ListItem title='Photography'>
-              The importance of the right pic in your business is crucial to
-              appear professional and eye-catching. Guess what? I really love
-              shoot high quality pics.
             </ListItem>
           </List>
         </div>

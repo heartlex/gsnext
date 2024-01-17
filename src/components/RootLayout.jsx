@@ -13,6 +13,7 @@ import { GSLogo } from '@/components/GSLogo';
 import { Offices } from '@/components/Offices';
 import { SocialMedia } from '@/components/SocialMedia';
 import AnimatedCursor from 'react-animated-cursor';
+import { FadeIn } from '@/components/FadeIn';
 
 function XIcon(props) {
   return (
@@ -245,7 +246,6 @@ const AnimateCursor = () => {
           mixBlendMode: 'exclusion',
         }}
         innerStyle={{
-          // backgroundColor: 'var(--cursor-color)',
           mixBlendMode: 'exclusion',
         }}
       />
@@ -257,9 +257,9 @@ export function RootLayout({ children }) {
   let pathname = usePathname();
   return (
     <>
-      <div className='hidden lg:block'>
+      <FadeIn className='hidden lg:block'>
         <AnimateCursor />
-      </div>
+      </FadeIn>
       <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
     </>
   );

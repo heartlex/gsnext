@@ -24,7 +24,7 @@ export function Offices({ invert = false, ...props }) {
         <Office name='Dozza' invert={invert}>
           Via Pertini 3/D
           <br />
-          40060, Bologna, Italy
+          40060, Dozza, Italy
         </Office>
       </li>
       <li>
