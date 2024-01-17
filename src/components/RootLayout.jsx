@@ -235,14 +235,18 @@ const AnimateCursor = () => {
     <>
       <AnimatedCursor
         innerSize={8}
-        outerSize={18}
-        color='100, 100, 100'
-        outerAlpha={0.3}
+        outerSize={35}
+        color='255,255,255'
+        outerAlpha={1}
         innerScale={0.7}
         outerScale={5}
-        showSystemCursor={true}
+        hasBlendMode={true}
         outerStyle={{
-          mixBlendMode: 'difference',
+          mixBlendMode: 'exclusion',
+        }}
+        innerStyle={{
+          // backgroundColor: 'var(--cursor-color)',
+          mixBlendMode: 'exclusion',
         }}
       />
     </>
@@ -252,9 +256,11 @@ const AnimateCursor = () => {
 export function RootLayout({ children }) {
   let pathname = usePathname();
   return (
-    <RootLayoutInner key={pathname}>
-      <AnimateCursor />
-      {children}
-    </RootLayoutInner>
+    <>
+      <div className='hidden lg:block'>
+        <AnimateCursor />
+      </div>
+      <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
+    </>
   );
 }

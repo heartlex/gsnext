@@ -5,7 +5,7 @@ import '@/assets/styles/tailwind.css';
 export const metadata = {
   title: {
     template: '%s - Gianluca Strada',
-    default: "Gianluca Strada creative developer. It's all about magic",
+    default: 'Gianluca Strada creative developer',
   },
 };
 

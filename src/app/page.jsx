@@ -17,6 +17,7 @@ import wp from '@/assets/images/stack/wp.svg';
 import shopify from '@/assets/images/stack/shopify.svg';
 import loopback from '@/assets/images/stack/loopback.svg';
 import java from '@/assets/images/stack/java.svg';
+import lit from '@/assets/images/stack/lit.svg';
 import imageLaptop from '@/assets/images/laptop.jpg';
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata';
 import { ContactSection } from '@/components/ContactSection';
@@ -34,6 +35,7 @@ const clients = [
   ['Wp', wp],
   ['Loopback', loopback],
   ['Java', java],
+  ['Lit', lit],
 ];
 
 function Clients() {
