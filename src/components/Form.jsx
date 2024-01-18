@@ -3,7 +3,7 @@
 import emailjs from '@emailjs/browser';
 import { FadeIn } from '@/components/FadeIn';
 import { Button } from '@/components/Button';
-import { useEffect, useId } from 'react';
+import { useEffect, useId, useRef } from 'react';
 
 function TextInput({ label, ...props }) {
   let id = useId();
@@ -39,67 +39,74 @@ function RadioInput({ label, ...props }) {
     </label>
   );
 }
+
 export default function Form() {
-  useEffect(() => emailjs.init('YOUR-PUBLIC-KEY-HERE'), []);
+  const ref = useRef(null);
+
+  useEffect(() => emailjs.init('Se1t0pXrCU-Tv37ZO'), []);
   const sendEmail = (e) => {
     e.preventDefault(); // prevents the page from reloading when you hit “Send”
 
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        form.current,
-        'YOUR_PUBLIC_KEY'
+        'service_38jawt5',
+        'template_6vtan1p',
+        ref.current,
+        'Se1t0pXrCU-Tv37ZO'
       )
       .then(
-        (result) => {
-          // show the user a success message
-        },
-        (error) => {
-          // show the user an error
-        }
+        (result) => {},
+        (error) => {}
       );
   };
   return (
     <FadeIn className='lg:order-last'>
-      <form>
+      <form ref={ref}>
         <h2 className='font-display text-base font-semibold text-neutral-950'>
           Work inquiries
         </h2>
         <div className='isolate mt-6 -space-y-px rounded-2xl bg-white/50'>
-          <TextInput label='Name' name='name' autoComplete='name' />
+          <TextInput label='Name' name='name' id='name' autoComplete='name' />
           <TextInput
             label='Email'
             type='email'
-            name='email'
+            name='mail'
+            id='mail'
             autoComplete='email'
           />
           <TextInput
             label='Company'
             name='company'
+            id='company'
             autoComplete='organization'
           />
-          <TextInput label='Phone' type='tel' name='phone' autoComplete='tel' />
-          <TextInput label='Message' name='message' />
+          <TextInput
+            label='Phone'
+            type='tel'
+            name='phone'
+            id='phone'
+            autoComplete='tel'
+          />
+          <TextInput label='Message' name='message' id='message' />
           <div className='border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl'>
             <fieldset>
               <legend className='text-base/6 text-neutral-500'>
                 How did you know about me?
               </legend>
               <div className='mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2'>
-                <RadioInput label='Word of mouth' name='budget' value='wom' />
+                <RadioInput label='Word of mouth' name='how' value='wom' />
                 <RadioInput
                   label='Through social media'
-                  name='budget'
+                  name='how'
                   value='social'
                 />
-                <RadioInput label='By chance' name='budget' value='chance' />
-                <RadioInput label='Other' name='budget' value='other' />
+                <RadioInput label='By chance' name='how' value='chance' />
+                <RadioInput label='Other' name='how' value='other' />
               </div>
             </fieldset>
           </div>
         </div>
-        <Button type='submit' className='mt-10'>
+        <Button type='submit' className='mt-10' onClick={sendEmail}>
           Let’s work together
         </Button>
       </form>
