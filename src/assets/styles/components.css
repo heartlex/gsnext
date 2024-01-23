@@ -1,3 +1,29 @@
 @import 'typography.css';
 
 @tailwind components;
+
+@layer components {
+    .text {
+        transition: top 0.7s;
+        position: absolute;
+    }
+
+    .primary {
+        top: 0;
+    }
+
+    .secondary {
+        top: 80px;
+    }
+
+
+    @keyframes slideUp {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-80px);
+        }
+    }
+
+}

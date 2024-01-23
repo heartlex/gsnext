@@ -3,14 +3,15 @@
 import emailjs from '@emailjs/browser';
 import { FadeIn } from '@/components/FadeIn';
 import { Button } from '@/components/Button';
-import { useEffect, useId, useRef } from 'react';
+import { useEffect, useId } from 'react';
+import { useForm } from 'react-hook-form';
 
-function TextInput({ label, ...props }) {
+function TextInput({ register, name, options, label, ...props }) {
   let id = useId();
-
   return (
     <div className='group relative z-0 transition-all focus-within:z-10'>
       <input
+        {...register(name, options)}
         type='text'
         id={id}
         {...props}
@@ -27,10 +28,11 @@ function TextInput({ label, ...props }) {
   );
 }
 
-function RadioInput({ label, ...props }) {
+function RadioInput({ register, name, label, ...props }) {
   return (
     <label className='flex gap-x-3'>
       <input
+        {...register(name)}
         type='radio'
         {...props}
         className='h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 outline-none checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2'
@@ -41,73 +43,120 @@ function RadioInput({ label, ...props }) {
 }
 
 export default function Form() {
-  const ref = useRef(null);
+  const {
+    register,
+    reset,
+    formState: { isValid },
+    handleSubmit,
+  } = useForm({
+    defaultValues: {
+      name: '',
+      mail: '',
+      message: '',
+      company: '',
+      phone: '',
+      how: '',
+    },
+  });
 
   useEffect(() => emailjs.init('Se1t0pXrCU-Tv37ZO'), []);
-  const sendEmail = (e) => {
-    e.preventDefault(); // prevents the page from reloading when you hit “Send”
-
+  const sendEmail = (formData) => {
     emailjs
-      .sendForm(
+      .send(
         'service_38jawt5',
         'template_6vtan1p',
-        ref.current,
+        formData,
         'Se1t0pXrCU-Tv37ZO'
       )
       .then(
-        (result) => {},
+        (result) => {
+          // submit.current.style.animation = 'slideUp 0.7s ease forwards'
+          reset();
+        },
         (error) => {}
       );
   };
   return (
     <FadeIn className='lg:order-last'>
-      <form ref={ref}>
+      <form onSubmit={handleSubmit(sendEmail)}>
         <h2 className='font-display text-base font-semibold text-neutral-950'>
           Work inquiries
         </h2>
         <div className='isolate mt-6 -space-y-px rounded-2xl bg-white/50'>
-          <TextInput label='Name' name='name' id='name' autoComplete='name' />
           <TextInput
-            label='Email'
+            autoComplete='name'
+            label='Name*'
+            name='name'
+            register={register}
+            options={{ required: true }}
+          />
+          <TextInput
+            label='Email*'
             type='email'
             name='mail'
-            id='mail'
+            register={register}
+            options={{ required: true }}
             autoComplete='email'
           />
           <TextInput
             label='Company'
             name='company'
-            id='company'
+            register={register}
             autoComplete='organization'
           />
           <TextInput
             label='Phone'
             type='tel'
             name='phone'
-            id='phone'
+            register={register}
             autoComplete='tel'
           />
-          <TextInput label='Message' name='message' id='message' />
+          <TextInput
+            label='Message*'
+            name='message'
+            register={register}
+            options={{ required: true }}
+          />
           <div className='border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl'>
             <fieldset>
               <legend className='text-base/6 text-neutral-500'>
                 How did you know about me?
               </legend>
               <div className='mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2'>
-                <RadioInput label='Word of mouth' name='how' value='wom' />
                 <RadioInput
+                  label='Word of mouth'
+                  name='how'
+                  register={register}
+                  value='wom'
+                />
+                <RadioInput
+                  register={register}
                   label='Through social media'
                   name='how'
                   value='social'
                 />
-                <RadioInput label='By chance' name='how' value='chance' />
-                <RadioInput label='Other' name='how' value='other' />
+                <RadioInput
+                  register={register}
+                  label='By chance'
+                  name='how'
+                  value='chance'
+                />
+                <RadioInput
+                  register={register}
+                  label='Other'
+                  name='how'
+                  value='other'
+                />
               </div>
             </fieldset>
           </div>
         </div>
-        <Button type='submit' className='mt-10' onClick={sendEmail}>
-          Let’s work together
+        <Button type='submit' className='mt-10' disabled={!isValid}>
+          <div className='opacity-0'>Let’s work together</div>
+          <div className='primary text flex justify-center'>
+            Let’s work together
+          </div>
+          <div className='secondary text flex justify-center'>Message sent</div>
         </Button>
       </form>
     </FadeIn>
