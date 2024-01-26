@@ -7,4 +7,37 @@
     .play-state-paused {
         animation-play-state: paused;
     }
+
+    .submit-text-primary {
+        top: 0;
+        position: absolute;
+    }
+
+    .submit-text-secondary {
+        top: 80px;
+        position: absolute;
+    }
+
+    .slide-up-submit-text {
+        .submit-text-primary {
+            animation: slideUp 2s ease forwards;
+        }
+
+        .submit-text-secondary {
+            animation: slideUp 2s ease forwards
+        }
+    }
+
+
+    @keyframes slideUp {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-80px);
+        }
+        100% {
+            transform: translateY(-80px);
+        }
+    }
 }

@@ -3,7 +3,7 @@
 import emailjs from '@emailjs/browser';
 import { FadeIn } from '@/components/FadeIn';
 import { Button } from '@/components/Button';
-import { useEffect, useId } from 'react';
+import { useEffect, useId, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 
 function TextInput({ register, name, options, label, ...props }) {
@@ -59,6 +59,8 @@ export default function Form() {
     },
   });
 
+  let submit = useRef(null);
+
   useEffect(() => emailjs.init('Se1t0pXrCU-Tv37ZO'), []);
   const sendEmail = (formData) => {
     emailjs
@@ -70,8 +72,7 @@ export default function Form() {
       )
       .then(
         (result) => {
-          // submit.current.style.animation = 'slideUp 0.7s ease forwards'
-          reset();
+          submit.current.classList.add('slide-up-submit-text');
         },
         (error) => {}
       );
@@ -151,12 +152,17 @@ export default function Form() {
             </fieldset>
           </div>
         </div>
-        <Button type='submit' className='mt-10' disabled={!isValid}>
+        <Button
+          type='submit'
+          className='mt-10 '
+          disabled={!isValid}
+          ref={submit}
+        >
           <div className='opacity-0'>Let’s work together</div>
-          <div className='primary text flex justify-center'>
+          <div className='submit-text-primary' onAnimationEnd={() => reset()}>
             Let’s work together
           </div>
-          <div className='secondary text flex justify-center'>Message sent</div>
+          <div className='submit-text-secondary'>Message sent</div>
         </Button>
       </form>
     </FadeIn>
