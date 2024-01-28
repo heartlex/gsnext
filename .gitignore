@@ -46,3 +46,5 @@ sitemap-*.xml
 # locks
 package-lock.json
 #yarn.lock
+
+/templates
