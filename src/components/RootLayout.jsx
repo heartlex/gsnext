@@ -47,9 +47,6 @@ function Header({
           <GSLogo className='h-24' invert={invert} animated={true} />
         </Link>
         <div className='flex items-center gap-x-8'>
-          <Button href='/contact' invert={invert}>
-            Contact me
-          </Button>
           <button
             ref={toggleRef}
             type='button'
@@ -103,13 +100,9 @@ function Navigation() {
   return (
     <nav className='mt-px font-display text-5xl font-medium tracking-tight text-white'>
       <NavigationRow>
-        <NavigationItem href='/work'>My Work</NavigationItem>
         <NavigationItem href='/process'>The Process</NavigationItem>
+        <NavigationItem href='/contact'>Contact me</NavigationItem>
       </NavigationRow>
-      {/*<NavigationRow>*/}
-      {/*  <NavigationItem href='/about'>About me</NavigationItem>*/}
-      {/*  <NavigationItem href='/blog'>Blog</NavigationItem>*/}
-      {/*</NavigationRow>*/}
     </nav>
   );
 }

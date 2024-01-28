@@ -13,7 +13,6 @@ import ps from '@/assets/images/stack/ps.svg';
 import react from '@/assets/images/stack/react.svg';
 import figma from '@/assets/images/stack/figma.svg';
 import ts from '@/assets/images/stack/ts.svg';
-import wp from '@/assets/images/stack/wp.svg';
 import shopify from '@/assets/images/stack/shopify.svg';
 import loopback from '@/assets/images/stack/loopback.svg';
 import java from '@/assets/images/stack/java.svg';
@@ -26,34 +25,30 @@ import { Button } from '@/components/Button';
 const clients = [
   ['Angular', angular],
   ['React', react],
+  ['Lit', lit],
+  ['Ts', ts],
   ['AI', ai],
   ['PS', ps],
   ['Figma', figma],
-  ['Docker', docker],
-  ['Ts', ts],
   ['shopify', shopify],
   ['Ionic', ionic],
-  ['Wp', wp],
+  ['Docker', docker],
   ['Loopback', loopback],
   ['Java', java],
-  ['Lit', lit],
 ];
 
 function Clients() {
   return (
-    <div className='mt-24  bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56'>
+    <div className='mt-24 rounded-b-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56'>
       <Container>
         <FadeIn className='flex items-center gap-x-8'>
           <h2 className='text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left'>
-            I’ve worked with tens of amazing tools
+            I work with such amazing tools
           </h2>
           <div className='h-px flex-auto bg-neutral-800' />
         </FadeIn>
         <FadeInStagger faster>
-          <ul
-            role='list'
-            className='mt-10 grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3 lg:grid-cols-4'
-          >
+          <ul role='list' className='mt-10 flex justify-between'>
             {clients.map(([stack, logo]) => (
               <li key={stack}>
                 <FadeIn>
@@ -206,15 +201,6 @@ export default async function Home() {
       <Clients />
 
       <CaseStudies caseStudies={caseStudies} />
-
-      {/*<Testimonial*/}
-      {/*  className='mt-24 sm:mt-32 lg:mt-40'*/}
-      {/*  stack={{ name: 'Phobia', logo: logoPhobiaDark }}*/}
-      {/*>*/}
-      {/*  The team at Studio went above and beyond with our onboarding, even*/}
-      {/*  finding a way to access the user’s microphone without triggering one of*/}
-      {/*  those annoying permission dialogs.*/}
-      {/*</Testimonial>*/}
 
       <Services />
 
