@@ -18,7 +18,6 @@ import loopback from '@/assets/images/stack/loopback.svg';
 import java from '@/assets/images/stack/java.svg';
 import lit from '@/assets/images/stack/lit.svg';
 import imageLaptop from '@/assets/images/laptop.jpg';
-import { loadMDXMetadata } from '@/lib/loadMDXMetadata';
 import { ContactSection } from '@/components/ContactSection';
 import { Button } from '@/components/Button';
 
