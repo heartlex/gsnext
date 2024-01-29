@@ -229,7 +229,7 @@ export const metadata = {
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow='The process' title='How I work'>
+      <PageIntro eyebrow='The Process' title='How I work'>
         <p>
           Understanding and prioritizing the unique needs of each client is my
           key to success. I'm on a mission to turn your challenges into

@@ -24,8 +24,15 @@ const navigation = [
   //   ],
   // },
   {
+    title: 'Navigation',
+    links: [
+      { title: 'The Process', href: '/process' },
+      { title: 'Contact me', href: '/contact' },
+    ],
+  },
+  {
     title: 'Connect',
-    links: [{ title: 'Contact me', href: '/contact' }, ...socialMediaProfiles],
+    links: [...socialMediaProfiles],
   },
 ];
 

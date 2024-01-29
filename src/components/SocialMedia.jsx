@@ -71,16 +71,16 @@ function LinkedinIcon(props) {
 }
 
 export const socialMediaProfiles = [
-  {
-    title: 'Facebook',
-    href: 'https://www.facebook.com/gianluca.supercalifragilistichespiralidoso.strada/',
-    icon: FacebookIcon,
-  },
-  {
-    title: 'Instagram',
-    href: 'https://www.instagram.com/gianlucastrada_',
-    icon: InstagramIcon,
-  },
+  // {
+  //   title: 'Facebook',
+  //   href: 'https://www.facebook.com/gianluca.supercalifragilistichespiralidoso.strada/',
+  //   icon: FacebookIcon,
+  // },
+  // {
+  //   title: 'Instagram',
+  //   href: 'https://www.instagram.com/gianlucastrada_',
+  //   icon: InstagramIcon,
+  // },
   { title: 'GitHub', href: 'https://github.com/heartlex', icon: GitHubIcon },
   {
     title: 'Linkedin',
