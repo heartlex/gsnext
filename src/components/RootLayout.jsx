@@ -227,12 +227,13 @@ const AnimateCursor = () => {
   return (
     <>
       <AnimatedCursor
+        clickables={['input', 'a', 'label', 'select', 'textarea', 'button']}
         innerSize={8}
         outerSize={35}
         color='255,255,255'
         outerAlpha={1}
         innerScale={0.7}
-        outerScale={5}
+        outerScale={4}
         hasBlendMode={true}
         outerStyle={{
           mixBlendMode: 'exclusion',
