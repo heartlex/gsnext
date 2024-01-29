@@ -12,6 +12,7 @@ import { TagList, TagListItem } from '@/components/TagList';
 import imageLaptop from '@/assets/images/laptop.jpg';
 import imageMeeting from '@/assets/images/meeting.jpg';
 import imageWhiteboard from '@/assets/images/whiteboard.jpg';
+import imageDeliver from '@/assets/images/deliver.jpg';
 
 function Section({ title, image, children }) {
   return (
@@ -127,7 +128,7 @@ function Develop() {
 
 function Deliver() {
   return (
-    <Section title='Deliver' image={{ src: imageLaptop, shape: 3 }}>
+    <Section title='Deliver' image={{ src: imageDeliver, shape: 3 }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
           A meticulous quality assurance practitioner, i excel in thorough

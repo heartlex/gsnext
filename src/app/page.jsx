@@ -22,7 +22,7 @@ import { loadMDXMetadata } from '@/lib/loadMDXMetadata';
 import { ContactSection } from '@/components/ContactSection';
 import { Button } from '@/components/Button';
 
-const clients = [
+const techs = [
   ['Angular', angular],
   ['React', react],
   ['Lit', lit],
@@ -37,7 +37,7 @@ const clients = [
   ['Java', java],
 ];
 
-function Clients() {
+function Techs() {
   return (
     <div className='mt-24 rounded-b-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56'>
       <Container>
@@ -49,7 +49,7 @@ function Clients() {
         </FadeIn>
         <FadeInStagger faster>
           <ul role='list' className='mt-10 flex justify-between'>
-            {clients.map(([stack, logo]) => (
+            {techs.map(([stack, logo]) => (
               <li key={stack}>
                 <FadeIn>
                   <Image src={logo} alt={stack} unoptimized />
@@ -77,13 +77,13 @@ function CaseStudies({ caseStudies }) {
   return (
     <>
       <SectionIntro
-        title='Harnessing technology for a brighter future'
+        title='Passion, dedication and commitment.'
         className='mt-24 sm:mt-32 lg:mt-40'
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+          Yet, achieving success demands more than just this; it requires
+          strategic planning, resilience in the face of challenges, and a
+          continuous thirst for knowledge.
         </p>
       </SectionIntro>
       <Container className='mt-16'>
@@ -181,8 +181,7 @@ export const metadata = {
 };
 
 export default async function Home() {
-  let caseStudies = (await loadMDXMetadata('work')).slice(0, 3);
-
+  // let caseStudies = (await loadMDXMetadata('work')).slice(0, 3);
   return (
     <>
       <Container className='mt-24 sm:mt-32 md:mt-56'>
@@ -197,13 +196,9 @@ export default async function Home() {
           </p>
         </FadeIn>
       </Container>
-
-      <Clients />
-
-      <CaseStudies caseStudies={caseStudies} />
-
+      <Techs />
       <Services />
-
+      {/*<CaseStudies caseStudies={caseStudies} />*/}
       <ContactSection />
     </>
   );

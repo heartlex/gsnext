@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion';
-import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Footer } from '@/components/Footer';
 import { GridPattern } from '@/components/GridPattern';
@@ -248,6 +247,9 @@ const AnimateCursor = () => {
 
 export function RootLayout({ children }) {
   let pathname = usePathname();
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+  }, []);
   return (
     <>
       <FadeIn className='hidden lg:block'>
