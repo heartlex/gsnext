@@ -149,7 +149,7 @@ export default async function Work() {
         <p>
           I believe in efficiency and maximizing my resources to provide the
           best value to our clients. The primary way we do that is by re-using
-          the same five projects i’ve been developing for the past decade.
+          the same five projects I’ve been developing for the past decade.
         </p>
       </PageIntro>
 

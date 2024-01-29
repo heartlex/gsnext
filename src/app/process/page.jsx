@@ -78,7 +78,7 @@ function Design() {
         <p>
           Whether it's designing a user interface that's a joy to use, mapping
           out systems for smooth sailing, or creating designs that catch the
-          eye, i've got the artistic touch. I turn ideas into designs that not
+          eye, I've got the artistic touch. I turn ideas into designs that not
           only
           <strong className='font-semibold text-neutral-950'>
             {' '}
@@ -111,7 +111,7 @@ function Develop() {
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
           Translating design concepts into robust, efficient, and reliable code.
-          Navigating coding challenges with precision, i ensure a seamless
+          Navigating coding challenges with precision, I ensure a seamless
           development process that aligns with project objectives. Clients
           entrust me to bring their{' '}
           <strong className='font-semibold text-neutral-950'>
@@ -131,16 +131,16 @@ function Deliver() {
     <Section title='Deliver' image={{ src: imageDeliver, shape: 3 }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
-          A meticulous quality assurance practitioner, i excel in thorough
+          A meticulous quality assurance practitioner, I excel in thorough
           testing procedures to guarantee a polished final product. Managing
-          deployment processes seamlessly, i ensure the successful delivery of
+          deployment processes seamlessly, I ensure the successful delivery of
           refined and flawless solutions that exceed client expectations.
           Clients commend my commitment to delivering not just functional
           products but refined, quality solutions.
         </p>
         <p>
           Throughout these stages, my effective communication style fosters
-          transparency and understanding. i am dedicated to ensuring a
+          transparency and understanding. I am dedicated to ensuring a
           professional and successful project journey, delivering results that
           meet and surpass client expectations.
         </p>
@@ -156,10 +156,10 @@ function Deliver() {
         </ListItem>
         <ListItem title='Infrastructure'>
           You already know where to host your website? Very well, but if you
-          don't, i'll help providing the best solution for your budget.
+          don't, I'll help providing the best solution for your budget.
         </ListItem>
         <ListItem title='Support'>
-          Because i hold the API keys for every critical service your business
+          Because I hold the API keys for every critical service your business
           uses, you can expect a lifetime of support, and invoices, from me 🧛🏻.
         </ListItem>
       </List>
@@ -210,7 +210,7 @@ function Values() {
             reputation for delivering exceptional results.
           </GridListItem>
           <GridListItem title='Innovation'>
-            The technological landscape is always evolving and so am i,
+            The technological landscape is always evolving and so am I,
             constantly on the lookout for new things to explore.
           </GridListItem>
         </GridList>
@@ -229,11 +229,11 @@ export const metadata = {
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow='The process' title='How i work'>
+      <PageIntro eyebrow='The process' title='How I work'>
         <p>
           Understanding and prioritizing the unique needs of each client is my
           key to success. I'm on a mission to turn your challenges into
-          triumphs, because your satisfaction is my priority and i'm dedicated
+          triumphs, because your satisfaction is my priority and I'm dedicated
           to delivering custom solutions that precisely fit your requirements.
         </p>
       </PageIntro>
