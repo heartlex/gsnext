@@ -45,19 +45,6 @@ function Techs() {
             I work with such amazing tools
           </h2>
           <div className='h-px flex-auto bg-neutral-800' />
-        </FadeIn>
-        <FadeInStagger faster>
-          <ul role='list' className='mt-10 flex justify-between'>
-            {techs.map(([stack, logo]) => (
-              <li key={stack}>
-                <FadeIn>
-                  <Image src={logo} alt={stack} unoptimized />
-                </FadeIn>
-              </li>
-            ))}
-          </ul>
-        </FadeInStagger>
-        <FadeIn className='mt-10 flex justify-end'>
           <Button
             href='https://www.dropbox.com/s/7b8i0paenrfg7qx/cv_EN.pdf?dl=0'
             download
@@ -67,6 +54,20 @@ function Techs() {
             View resume
           </Button>
         </FadeIn>
+        <FadeInStagger faster>
+          <ul
+            role='list'
+            className='mt-10 flex flex-wrap justify-between gap-y-8'
+          >
+            {techs.map(([stack, logo]) => (
+              <li key={stack} className='w-1/4 sm:w-1/6 lg:w-[36px]'>
+                <FadeIn>
+                  <Image src={logo} alt={stack} unoptimized />
+                </FadeIn>
+              </li>
+            ))}
+          </ul>
+        </FadeInStagger>
       </Container>
     </div>
   );
