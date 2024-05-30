@@ -9,9 +9,9 @@ import { PageIntro } from '@/components/PageIntro';
 import { SectionIntro } from '@/components/SectionIntro';
 import { StylizedImage } from '@/components/StylizedImage';
 import { TagList, TagListItem } from '@/components/TagList';
-import imageLaptop from '@/assets/images/laptop.jpg';
-import imageMeeting from '@/assets/images/meeting.jpg';
-import imageWhiteboard from '@/assets/images/whiteboard.jpg';
+import imageDevelop from '@/assets/images/develop.jpg';
+import imageDesign from '@/assets/images/design.JPG';
+import imageDiscover from '@/assets/images/discover.jpg';
 import imageDeliver from '@/assets/images/deliver.jpg';
 
 function Section({ title, image, children }) {
@@ -46,7 +46,7 @@ function Section({ title, image, children }) {
 
 function Discover() {
   return (
-    <Section title='Discover' image={{ src: imageWhiteboard }}>
+    <Section title='Discover' image={{ src: imageDiscover }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
           Piecing together the puzzle to uncover what the the client
@@ -73,7 +73,7 @@ function Discover() {
 
 function Design() {
   return (
-    <Section title='Design' image={{ src: imageLaptop, shape: 1 }}>
+    <Section title='Design' image={{ src: imageDesign, shape: 1 }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
           Whether it's designing a user interface that's a joy to use, mapping
@@ -107,7 +107,7 @@ function Design() {
 
 function Develop() {
   return (
-    <Section title='Develop' image={{ src: imageMeeting, shape: 2 }}>
+    <Section title='Develop' image={{ src: imageDevelop, shape: 2 }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
           Translating design concepts into robust, efficient, and reliable code.

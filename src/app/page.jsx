@@ -17,7 +17,7 @@ import shopify from '@/assets/images/stack/shopify.svg';
 import loopback from '@/assets/images/stack/loopback.svg';
 import java from '@/assets/images/stack/java.svg';
 import lit from '@/assets/images/stack/lit.svg';
-import imageLaptop from '@/assets/images/laptop.jpg';
+import imageZen from '@/assets/images/zen.jpeg';
 import { ContactSection } from '@/components/ContactSection';
 import { Button } from '@/components/Button';
 
@@ -145,7 +145,7 @@ function Services() {
           <div className='flex justify-center lg:w-1/2 lg:justify-end lg:pr-12'>
             <FadeIn className='w-[33.75rem] flex-none lg:w-[45rem]'>
               <StylizedImage
-                src={imageLaptop}
+                src={imageZen}
                 sizes='(min-width: 1024px) 41rem, 31rem'
                 className='justify-center lg:justify-end'
               />
