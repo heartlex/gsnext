@@ -1,5 +1,9 @@
 @tailwind base;
 
+:root {
+  --primary-color: theme(colors.screamin-green.DEFAULT);
+}
+
 @font-face {
   font-family: 'Mona Sans';
   font-weight: 200 900;
