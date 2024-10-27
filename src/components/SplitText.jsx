@@ -4,7 +4,7 @@
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
 
-export function SplitText({ children }) {
+export function SplitText({ shadowClassName, children }) {
   // Split the text into individual characters
   const letters = children.split('');
 
@@ -61,8 +61,7 @@ export function SplitText({ children }) {
           <motion.span
             key={index}
             variants={hoverVariant}
-            style={{ color: 'var(--primary-color)' }}
-            className={clsx('whitespace-pre')}
+            className={clsx('whitespace-pre', shadowClassName)}
             transition={{
               type: 'spring',
               duration: 0.4,
