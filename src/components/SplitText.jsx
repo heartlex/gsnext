@@ -46,7 +46,8 @@ export function SplitText({ children }) {
           variants={hoverVariant}
           className={clsx('whitespace-pre')}
           transition={{
-            duration: 0.25,
+            type: 'spring',
+            duration: 0.4,
             ease: 'easeOut',
           }}
         >
@@ -63,7 +64,8 @@ export function SplitText({ children }) {
             style={{ color: 'var(--primary-color)' }}
             className={clsx('whitespace-pre')}
             transition={{
-              duration: 0.25,
+              type: 'spring',
+              duration: 0.4,
               ease: 'easeOut',
             }}
           >
