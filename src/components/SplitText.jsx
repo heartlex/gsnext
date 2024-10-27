@@ -1,8 +1,7 @@
+// components/AnimatedText.js
 'use client';
 
-// components/AnimatedText.js
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import clsx from 'clsx';
 
 export function SplitText({ children }) {
@@ -10,8 +9,8 @@ export function SplitText({ children }) {
   const letters = children.split('');
 
   const hoverVariant = {
-    start: {
-      y: '0',
+    initial: {
+      y: '0%',
     },
     hover: {
       y: '-100%',
@@ -19,6 +18,12 @@ export function SplitText({ children }) {
   };
 
   const staggerChildren = {
+    initial: {
+      transition: {
+        staggerChildren: 0.01,
+        staggerDirection: -1,
+      },
+    },
     hover: {
       transition: {
         staggerChildren: 0.01,
@@ -28,19 +33,34 @@ export function SplitText({ children }) {
   };
 
   return (
-    <>
-      <motion.span
-        className={clsx('relative overflow-y-hidden inline-flex')}
-        whileHover='hover'
-        transition={{
-          staggerChildren: 0.01,
-          staggerDirection: 1,
-        }}
+    <motion.span
+      className={clsx('relative overflow-y-hidden inline-flex')}
+      variants={staggerChildren}
+      initial='initial'
+      whileHover='hover'
+      animate='initial'
+    >
+      {letters.map((letter, index) => (
+        <motion.span
+          key={index}
+          variants={hoverVariant}
+          className={clsx('whitespace-pre')}
+          transition={{
+            duration: 0.25,
+            ease: 'easeOut',
+          }}
+        >
+          {letter === ' ' ? '\u0020' : letter}
+        </motion.span>
+      ))}
+      <motion.div
+        className={clsx('absolute left-0 inline-flex translate-y-full')}
       >
         {letters.map((letter, index) => (
           <motion.span
             key={index}
             variants={hoverVariant}
+            style={{ color: 'var(--primary-color)' }}
             className={clsx('whitespace-pre')}
             transition={{
               duration: 0.25,
@@ -50,30 +70,8 @@ export function SplitText({ children }) {
             {letter === ' ' ? '\u0020' : letter}
           </motion.span>
         ))}
-        <motion.div
-          className={clsx('absolute left-0 inline-flex translate-y-full')}
-          transition={{
-            staggerChildren: 0.01,
-            staggerDirection: 1,
-          }}
-        >
-          {letters.map((letter, index) => (
-            <motion.span
-              key={index}
-              variants={hoverVariant}
-              style={{ color: 'var(--primary-color)' }}
-              className={clsx('whitespace-pre')}
-              transition={{
-                duration: 0.25,
-                ease: 'easeOut',
-              }}
-            >
-              {letter === ' ' ? '\u0020' : letter}
-            </motion.span>
-          ))}
-        </motion.div>
-      </motion.span>
-    </>
+      </motion.div>
+    </motion.span>
   );
 }
 
