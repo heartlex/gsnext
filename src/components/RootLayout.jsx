@@ -158,8 +158,8 @@ function RootLayoutInner({ children }) {
         <motion.div
           layout
           id={panelId}
-          style={{ height: expanded ? 'auto' : '0.5rem' }}
-          className='relative z-50 overflow-hidden bg-neutral-950 pt-2'
+          style={{ height: expanded ? 'auto' : '0' }}
+          className='relative z-50 overflow-hidden bg-neutral-950'
           aria-hidden={expanded ? undefined : 'true'}
           inert={expanded ? undefined : ''}
         >
