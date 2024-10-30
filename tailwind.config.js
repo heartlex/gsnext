@@ -44,6 +44,9 @@ module.exports = {
           { fontVariationSettings: '"wdth" 125' },
         ],
       },
+      spacing: {
+        15: '3.75rem',
+      },
     },
   },
   plugins: [],

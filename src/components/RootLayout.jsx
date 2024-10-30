@@ -137,7 +137,7 @@ function RootLayoutInner({ children }) {
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
         <div
-          className='absolute left-0 right-0 top-2 z-40 pt-14'
+          className='absolute left-0 right-0 z-40 pt-15'
           aria-hidden={expanded ? 'true' : undefined}
           inert={expanded ? '' : undefined}
         >
@@ -158,8 +158,8 @@ function RootLayoutInner({ children }) {
         <motion.div
           layout
           id={panelId}
-          style={{ height: expanded ? 'auto' : '0' }}
-          className='relative z-50 overflow-hidden bg-neutral-950'
+          style={{ height: expanded ? 'auto' : '0.25rem' }}
+          className='relative z-50 overflow-hidden bg-neutral-950 pt-1'
           aria-hidden={expanded ? undefined : 'true'}
           inert={expanded ? undefined : ''}
         >
@@ -208,7 +208,7 @@ function RootLayoutInner({ children }) {
       <motion.div
         layout
         style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-        className='relative flex flex-auto overflow-hidden bg-white pt-14'
+        className='relative flex flex-auto overflow-hidden bg-white pt-15'
       >
         <motion.div
           layout
