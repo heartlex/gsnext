@@ -22,6 +22,7 @@ import { ContactSection } from '@/components/ContactSection';
 import { Button } from '@/components/Button';
 import { SpringText } from '@/components/SpringText';
 import Scroller from '@/components/Scroller';
+import Scale from '@/components/Scale';
 
 const techs = [
   ['Angular', angular],
@@ -58,16 +59,21 @@ function Techs() {
           </Button>
         </FadeIn>
         <FadeIn>
-          <Scroller duration={20} className={'mt-10'}>
+          <Scroller className={'mt-10'}>
             {techs.map(([stack, logo]) => (
-              <span key={stack} className='w-[48px] sm:w-[64px] select-none '>
-                <Image
-                  src={logo}
-                  alt={stack}
-                  unoptimized
-                  className={'no-drag cursor-grab w-100 h-100'}
-                />
-              </span>
+              <Scale
+                scale={2}
+                className='w-[48px] sm:w-[64px] select-none ml-16 sm:ml-24 md:ml-32 lg:ml-44'
+              >
+                <span key={stack}>
+                  <Image
+                    src={logo}
+                    alt={stack}
+                    unoptimized
+                    className={'no-drag cursor-grab w-100 h-100'}
+                  />
+                </span>
+              </Scale>
             ))}
           </Scroller>
         </FadeIn>

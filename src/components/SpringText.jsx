@@ -27,7 +27,7 @@ export function SpringText({ children }) {
           key={index}
           variants={springAnimation}
           whileHover='hover'
-          style={{ display: 'inline-block', whiteSpace: 'pre' }}
+          className={'inline-block whitespace-pre'}
         >
           {letter === ' ' ? '\u0020' : letter}
         </motion.span>
