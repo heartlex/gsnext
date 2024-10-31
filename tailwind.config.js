@@ -47,7 +47,26 @@ module.exports = {
       spacing: {
         15: '3.75rem',
       },
+      width: {
+        'max-content': 'max-content',
+        100: '100%',
+      },
+      height: {
+        100: '100%',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.no-drag': {
+          '-webkit-user-drag': 'none',
+          'user-drag': 'none',
+        },
+        '.contents': {
+          display: 'contents',
+        },
+      });
+    },
+  ],
 };
