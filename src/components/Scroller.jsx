@@ -10,7 +10,7 @@ export function Scroller({ duration, className, children }) {
       <motion.div
         style={{ '--tw-space-x-reverse': '1' }}
         className={clsx(
-          'flex items-center select-none w-max-content gap-x-12 sm:space-x-14 lg:space-x-16 flex-nowrap gap-y-8',
+          'flex items-center select-none w-max-content space-x-16 sm:space-x-24 md:space-x-52 lg:space-x-64 xl:space-x-80 flex-nowrap absolute',
         )}
         initial={{ x: '0' }}
         animate={{ x: '-51.65%' }} //TODO: why this?
