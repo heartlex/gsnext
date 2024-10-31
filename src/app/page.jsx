@@ -41,7 +41,7 @@ const techs = [
 
 function Techs() {
   return (
-    <div className='mt-24 rounded-b-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56'>
+    <div className='mt-24 rounded-b-3xl md:rounded-b-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56'>
       <Container>
         <FadeIn className='flex flex-wrap items-center gap-x-8'>
           <h2 className='text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left'>
@@ -57,8 +57,6 @@ function Techs() {
           >
             View resume
           </Button>
-        </FadeIn>
-        <FadeIn>
           <Scroller className={'mt-10'}>
             {techs.map(([stack, logo]) => (
               <Scale

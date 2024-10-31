@@ -207,8 +207,7 @@ function RootLayoutInner({ children }) {
 
       <motion.div
         layout
-        style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-        className='relative flex flex-auto overflow-hidden bg-white pt-15'
+        className='relative flex flex-auto overflow-hidden bg-white pt-15 rounded-t-3xl md:rounded-t-4xl'
       >
         <motion.div
           layout
