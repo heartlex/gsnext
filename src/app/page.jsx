@@ -68,7 +68,7 @@ function Techs() {
                     src={logo}
                     alt={stack}
                     unoptimized
-                    className={'no-drag cursor-grab w-100 h-100'}
+                    className={'no-drag w-100 h-100'}
                   />
                 </span>
               </Scale>
