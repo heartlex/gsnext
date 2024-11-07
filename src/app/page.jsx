@@ -57,7 +57,7 @@ function Techs() {
           >
             View resume
           </Button>
-          <Scroller className={'mt-10'}>
+          <Scroller>
             {techs.map(([stack, logo]) => (
               <Scale
                 scale={2}
