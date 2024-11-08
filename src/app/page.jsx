@@ -23,6 +23,7 @@ import { Button } from '@/components/Button';
 import { SpringText } from '@/components/SpringText';
 import Scroller from '@/components/Scroller';
 import Scale from '@/components/Scale';
+import Hello from '@/components/Hello';
 
 const techs = [
   ['Angular', angular],
@@ -230,7 +231,8 @@ export default async function Home() {
   return (
     <>
       <Container className='mt-24 sm:mt-32 md:mt-56'>
-        <FadeIn className='max-w-3xl'>
+        <Hello></Hello>
+        <FadeIn className='max-w-3xl relative'>
           <h1 className='font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl'>
             Hello, I'm <br></br>
             <SpringText>Gianluca Strada</SpringText>.

@@ -23,6 +23,8 @@
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.4.8",
+    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.37",
     "acorn": "^8.13.0",
     "acorn-jsx": "^5.3.2",
     "autoprefixer": "^10.4.20",
