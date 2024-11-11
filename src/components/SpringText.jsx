@@ -7,6 +7,11 @@ export function SpringText({ children }) {
   // Split the text into individual characters
   const letters = children.split('');
 
+  const words = children.split(/(\s+)/).map((word) => {
+    return word.split('');
+  });
+
+  console.log(words);
   const springAnimation = {
     hover: {
       y: -10,
@@ -22,15 +27,19 @@ export function SpringText({ children }) {
 
   return (
     <>
-      {letters.map((letter, index) => (
-        <motion.span
-          key={index}
-          variants={springAnimation}
-          whileHover='hover'
-          className={'inline-block whitespace-pre'}
-        >
-          {letter === ' ' ? '\u0020' : letter}
-        </motion.span>
+      {words.map((word, index) => (
+        <span key={index} className={'inline-block'}>
+          {word.map((letter, index) => (
+            <motion.span
+              key={index}
+              variants={springAnimation}
+              whileHover='hover'
+              className={'inline-block whitespace-pre'}
+            >
+              {letter === ' ' ? '\u0020' : letter}
+            </motion.span>
+          ))}
+        </span>
       ))}
     </>
   );

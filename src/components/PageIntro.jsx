@@ -16,8 +16,8 @@ export function PageIntro({ eyebrow, title, children, centered = false }) {
           <span className='sr-only'> - </span>
           <span
             className={clsx(
-              'mt-6 block max-w-5xl font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-6xl',
-              centered && 'mx-auto'
+              'mt-6 block max-w-5xl font-display text-5xl font-medium tracking-tight text-neutral-950 sm:text-6xl',
+              centered && 'mx-auto',
             )}
           >
             {title}
@@ -26,7 +26,7 @@ export function PageIntro({ eyebrow, title, children, centered = false }) {
         <div
           className={clsx(
             'mt-6  max-w-3xl text-xl text-neutral-600',
-            centered && 'mx-auto'
+            centered && 'mx-auto',
           )}
         >
           {children}
