@@ -2,6 +2,7 @@ import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { FadeIn } from '@/components/FadeIn';
 import { Offices } from '@/components/Offices';
+import SpringText from '@/components/SpringText';
 
 export function ContactSection() {
   return (
@@ -10,7 +11,7 @@ export function ContactSection() {
         <div className='mx-auto max-w-4xl'>
           <div className='max-w-xl'>
             <h2 className='font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl'>
-              Tell me about your project
+              <SpringText>Tell me about your project</SpringText>
             </h2>
             <div className='mt-6 flex'>
               <Button href='/contact' invert>
