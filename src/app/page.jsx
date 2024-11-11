@@ -20,7 +20,6 @@ import lit from '@/assets/images/stack/lit.svg';
 import imageZen from '@/assets/images/zen.jpeg';
 import { ContactSection } from '@/components/ContactSection';
 import { Button } from '@/components/Button';
-import { SpringText } from '@/components/SpringText';
 import Scroller from '@/components/Scroller';
 import Scale from '@/components/Scale';
 import Hello from '@/components/Hello';
@@ -232,10 +231,10 @@ export default async function Home() {
     <>
       <Container className='mt-24 sm:mt-32 md:mt-56'>
         <Hello></Hello>
-        <FadeIn className='max-w-3xl relative'>
+        <FadeIn className='max-w-3xl relative pointer-events-none'>
           <h1 className='font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl'>
             Hello, I'm <br></br>
-            <SpringText>Gianluca Strada</SpringText>.
+            Gianluca Strada.
           </h1>
           <p className='mt-6 text-xl text-neutral-600'>
             I'm a creative developer with a flair for design, photography, and

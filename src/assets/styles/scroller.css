@@ -1,0 +1,22 @@
+.container {
+    --duration: 10s;
+    transform: translateX(0);
+    transition: calc(var(--duration) * .2) ease-out;
+}
+.container div {
+    animation: scroll var(--duration) linear infinite;
+}
+.container:hover {
+    transform: translateX(-20%);
+}
+.container:hover div {
+    animation-play-state: paused;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translate(-50%);
+    }
+}
