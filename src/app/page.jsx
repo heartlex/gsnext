@@ -48,15 +48,6 @@ function Techs() {
             I work with such amazing tools
           </h2>
           <div className='h-px flex-auto bg-neutral-800' />
-          <Button
-            className='my-6 sm:my-0'
-            href='https://www.dropbox.com/s/7b8i0paenrfg7qx/cv_EN.pdf?dl=0'
-            download
-            aria-label='View resume'
-            invert
-          >
-            View resume
-          </Button>
           <Scroller>
             {techs.map(([stack, logo]) => (
               <Scale
@@ -176,13 +167,10 @@ function Services() {
     <>
       <SectionIntro
         eyebrow='Services'
-        title='Supercharging your business, expand your reach and guide you through untapped possibilities'
+        title='Innovate your business, expand your reach and guide you through untapped possibilities'
         className='mt-24 sm:mt-32 lg:mt-40'
       >
-        <p>
-          My mission? Illuminate your brand with ambition, freshness, and iconic
-          vibes. Let's make your business shine like never before!
-        </p>
+        <p>My mission? Tailor the perfect solution for your needs!</p>
       </SectionIntro>
       <Container className='mt-16'>
         <div className='lg:flex lg:items-center lg:justify-end'>
@@ -197,8 +185,7 @@ function Services() {
           </div>
           <List className='mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4'>
             <ListItem title='Web development'>
-              Specialized in crafting beautiful and high quality web apps,
-              tailored to your needs.
+              Specialized in crafting beautiful and high quality web apps.
             </ListItem>
             <ListItem title='E-commerce'>
               Unlock the full potential of your products by reaching the widest
@@ -237,9 +224,9 @@ export default async function Home() {
             Gianluca Strada.
           </h1>
           <p className='mt-6 text-xl text-neutral-600'>
-            I'm a creative developer with a flair for design, photography, and
-            technology. Ready to sprinkle some coding magic on your projects and
-            help you create something beautiful 🚀✨!
+            I'm a creative developer with a passion for design, photography, and
+            technology. Ready to collaborate on your projects to create
+            something beautiful 🚀✨!
           </p>
         </FadeIn>
       </Container>

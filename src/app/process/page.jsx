@@ -49,14 +49,9 @@ function Discover() {
     <Section title='Discover' image={{ src: imageDiscover }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
-          Piecing together the puzzle to uncover what the the client
-          <strong className='font-semibold text-neutral-950'>
-            {' '}
-            needs{' '}
-          </strong>{' '}
-          both explicit and latent. Grasp complex requirements and asking
-          insightful questions to translate conceptual ideas into precise
-          objectives.
+          Uncover the the client
+          <strong className='font-semibold text-neutral-950'> needs </strong> by
+          translating conceptual ideas into precise objectives.
         </p>
       </div>
       <h3 className='mt-12 font-display text-base font-semibold text-neutral-950'>
@@ -76,18 +71,15 @@ function Design() {
     <Section title='Design' image={{ src: imageDesign, shape: 1 }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
-          Whether it's designing a user interface that's a joy to use, mapping
-          out systems for smooth sailing, or creating designs that catch the
-          eye, I've got the artistic touch. I turn ideas into designs that not
-          only
+          I turn ideas into designs that not only
           <strong className='font-semibold text-neutral-950'>
             {' '}
             work well{' '}
           </strong>
-          but also{' '}
+          but also
           <strong className='font-semibold text-neutral-950'>
             {' '}
-            look very good{' '}
+            look very good
           </strong>
           . Clients appreciate my talent for making their ideas visually
           appealing and user-friendly.
@@ -110,16 +102,10 @@ function Develop() {
     <Section title='Develop' image={{ src: imageDevelop, shape: 2 }}>
       <div className='space-y-6 text-base text-neutral-600'>
         <p>
-          Translating design concepts into robust, efficient, and reliable code.
-          Navigating coding challenges with precision, I ensure a seamless
-          development process that aligns with project objectives. Clients
-          entrust me to bring their{' '}
-          <strong className='font-semibold text-neutral-950'>
-            {' '}
-            visions to life{' '}
-          </strong>{' '}
-          through the implementation of high-quality and technically sound
-          solutions.
+          From design concepts to robust, efficient, and reliable code that
+          aligns with the project{' '}
+          <strong className='font-semibold text-neutral-950'>objectives</strong>
+          .
         </p>
       </div>
     </Section>
@@ -130,19 +116,10 @@ function Deliver() {
   return (
     <Section title='Deliver' image={{ src: imageDeliver, shape: 3 }}>
       <div className='space-y-6 text-base text-neutral-600'>
+        <p>Time to go live.</p>
         <p>
-          A meticulous quality assurance practitioner, I excel in thorough
-          testing procedures to guarantee a polished final product. Managing
-          deployment processes seamlessly, I ensure the successful delivery of
-          refined and flawless solutions that exceed client expectations.
-          Clients commend my commitment to delivering not just functional
-          products but refined, quality solutions.
-        </p>
-        <p>
-          Throughout these stages, my effective communication style fosters
-          transparency and understanding. I am dedicated to ensuring a
-          professional and successful project journey, delivering results that
-          meet and surpass client expectations.
+          I am dedicated to ensuring a professional and successful project
+          journey, delivering results that meet and surpass client expectations.
         </p>
       </div>
 
@@ -150,17 +127,13 @@ function Deliver() {
         Included in this phase
       </h3>
       <List className='mt-8'>
-        <ListItem title='Testing'>
-          Projects always have 100% of tests working. This is quite simple when
-          you don't write any of them 😆.
-        </ListItem>
         <ListItem title='Infrastructure'>
           You already know where to host your website? Very well, but if you
           don't, I'll help providing the best solution for your budget.
         </ListItem>
         <ListItem title='Support'>
-          Because I hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from me 🧛🏻.
+          I'm always ready to provide a solution to unexpected situations, don't
+          hesitate to get in contact with me.
         </ListItem>
       </List>
     </Section>
@@ -182,11 +155,10 @@ function Values() {
         title='Balancing reliability, creativity and innovation'
       >
         <p>
-          Reliability is the cornerstone of my work, ensuring that every project
-          is delivered with precision and meets or exceeds expectations.
-          Creativity is my driving force, infusing unique and visually
-          compelling solutions into every design and development endeavor. I
-          embrace innovation as a mindset, constantly seeking new approaches and
+          Reliability is at the core of my collaboration with every client,
+          ensuring that every project is delivered with precision. Creativity is
+          my driving force to provide unique and aesthetics solutions. I embrace
+          innovation as a mindset, constantly seeking new approaches and
           technologies to push the boundaries of what's possible.
         </p>
       </SectionIntro>
@@ -232,9 +204,9 @@ export default function Process() {
       <PageIntro eyebrow='The Process' title='How I work'>
         <p>
           Understanding and prioritizing the unique needs of each client is my
-          key to success. I'm on a mission to turn your challenges into
-          triumphs, because your satisfaction is my priority and I'm dedicated
-          to delivering custom solutions that precisely fit your requirements.
+          key to success, because your satisfaction is my priority and I'm
+          dedicated to delivering custom solutions that precisely fit your
+          requirements.
         </p>
       </PageIntro>
 
