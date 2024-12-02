@@ -1,21 +1,9 @@
 'use client';
 
-import { motion, useAnimationFrame, useMotionValue } from 'framer-motion';
+import { motion } from 'framer-motion';
 import clsx from 'clsx';
-import { useEffect, useRef, useState } from 'react';
 
 export function Scroller({ className, shadow, children }) {
-  const [containerWidth, setContainerWidth] = useState(0); // Dynamic width
-  const containerRef = useRef(null);
-
-  // Measure the width of the content on load and when content changes
-  useEffect(() => {
-    if (containerRef.current) {
-      setContainerWidth(containerRef.current.scrollWidth); // Full width of content
-    }
-  }, [children]);
-
-  // Update position based on speed
   return (
     <section
       className={clsx(
@@ -25,7 +13,6 @@ export function Scroller({ className, shadow, children }) {
       )}
     >
       <motion.div
-        ref={containerRef}
         style={{ '--tw-space-x-reverse': '1' }}
         className={clsx(
           'flex items-center select-none w-max-content flex-nowrap -ml-60',
