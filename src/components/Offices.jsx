@@ -29,7 +29,7 @@ export function Offices({ invert = false, ...props }) {
       </li>
       <li>
         <Office name='Remote' invert={invert}>
-          I'm available for any timezone
+          Available for any timezone
           <br />
           REMOTELY
         </Office>
